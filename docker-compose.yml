@@ -1,0 +1,6 @@
+version: '3.0'
+
+services:
+  docker-flow-proxy-letsencrypt:
+    image: lgazo/docker-flow-proxy-letsencrypt:0.8-v0.27.1
+    build: .

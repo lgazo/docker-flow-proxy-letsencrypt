@@ -176,8 +176,11 @@ class DFPLEClient():
             self.dfp = self.services(self.dfp_service_name)[0]
             self.dfp_secrets = self.service_get_secrets(self.dfp)
 
+        logger.debug('Generated certificates: certs={} created={}'.format(certs, created))
+
         for domain, certs in certs.items():
 
+            logger.debug('Process certs: domain={} certs={}'.format(domain, certs))
             combined = [x for x in certs if '.pem' in x]
             if len(combined) == 0:
                 logger.error('Combined certificate not found. Check logs for errors.')

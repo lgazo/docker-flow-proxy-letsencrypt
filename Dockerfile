@@ -1,4 +1,4 @@
-FROM certbot/certbot
+FROM certbot/certbot:v0.27.1
 
 ENV DOCKER_SOCKET_PATH="/var/run/docker.sock" \
 	LETSENCRYPT_RENEWAL_CRON="30 2 * * *" \
